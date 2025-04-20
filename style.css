@@ -1,0 +1,916 @@
+/* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== */
+/*   Global Base      */
+/* ==================== */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    overflow-x: hidden;
+    /* padding-top: 60px; */
+}
+
+/* Background Animation Container */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+/* ==================== */
+/*   Navigation       */
+/* ==================== */
+/* ==================== */
+/*   Navigation       */
+/* ==================== */
+.navbar nav {
+    padding: 1.1rem 1rem;
+    /* Increase or decrease the padding for vertical spacing */
+    /* Set a fixed height for the navbar */
+    /* line-height: 80px;  */
+    /* Align items vertically if needed */
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 15px rgb(242, 0, 255); */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    /* background: linear-gradient(90deg, #ff00cc4f, #00eeff3c); */
+    border-bottom: 2px solid #ff00cc;
+    text-shadow: 0 0 5px #ff00cc, 0 0 10px #00f0ff;
+}
+
+/* Hamburger Menu for Mobile (positioned left) */
+.hamburger {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navigation Links: Centered using flexbox */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ff00cc;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .navbar nav ul.show {
+        display: flex;
+    }
+}
+
+/* ==================== */
+/*   Main Container   */
+/* ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 10px 10px;
+    position: relative;
+    z-index: 1;
+    /* Ensures the container is above the background animation */
+
+}
+
+/* ==================== */
+/*    Hero Section    */
+/* ==================== */
+.z-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 5px;
+    /* border: #00f0ff 2px solid; */
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.typed-text {
+    color: #ff00cc;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+}
+
+.buttons a {
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 0.7rem 1.3rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.buttons a:hover {
+    background: #ff00cc;
+    border-color: #ff00cc;
+    transform: translateY(-3px);
+}
+
+/* === Cyberpunk Social Links === */
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ff00cc;
+    border-radius: 50%;
+    color: #ff00cc;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.3rem;
+    box-shadow: 0 0 10px #ff00cc, 0 0 20px #0ff;
+}
+
+.social-btn:hover {
+    background-color: #0ff;
+    color: #000;
+    border-color: #0ff;
+    box-shadow: 0 0 15px #0ff, 0 0 25px #ff00cc;
+    transform: scale(1.15);
+}
+
+
+/* ==================== */
+/*   Avatar Section   */
+/* ==================== */
+#image-section {
+    text-align: center;
+    /* margin: 0; */
+}
+
+#cyberpunk-img {
+    display: block;
+    /* margin: 0 auto; */
+    /* Center the image horizontally */
+    transition: transform 0.3s ease;
+
+    margin: 0;
+    /* No margin from the top */
+    width: 500px;
+    /* Desired width */
+    height: 500px;
+    /* Desired height */
+    object-fit: cover;
+    /* Ensures the image fits within the dimensions */
+    transition: transform 0.3s ease;
+}
+
+
+
+#cyberpunk-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #cyberpunk-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #cyberpunk-img {
+        max-width: 90%;
+    }
+}
+
+#avatarSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#avatar-container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cyberpunk neon glow effect */
+    filter: drop-shadow(0 0 10px #ff00cc) drop-shadow(0 0 20px #ff00cc);
+}
+
+/* ==================== */
+/*   Services Section */
+/* ==================== */
+.z-services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
+.service-box {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Light translucent background */
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle border */
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px) rotateX(4deg) rotateY(4deg);
+    box-shadow: 0 0 25px rgba(255, 0, 200, 0.6);
+    /* Enhanced glow on hover */
+}
+
+.service-box h4 {
+    font-size: 1.2rem;
+    color: #ff00cc;
+    margin-bottom: 0.5rem;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-box p {
+    font-size: 0.95rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* ==================== */
+/*  Projects Section  */
+/* ==================== */
+/* === Projects Section === */
+/* === Projects Section === */
+.projects-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.projects-section h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* Wider cards */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    height: 220px;
+    /* Slightly reduced height */
+    background-size: cover;
+    /* Ensure the background image covers the card */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #00f0ff33, 0 0 25px #ff00cc33;
+    /* Neon glow */
+    position: relative;
+    /* For text overlay */
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    /* Align text at the bottom */
+    padding: 1rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Lift and scale on hover */
+    box-shadow: 0 0 25px #00f0ff88, 0 0 35px #ff00cc88;
+    /* Enhanced glow on hover */
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for better text visibility */
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.project-card:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+    /* Reduce overlay darkness on hover */
+}
+
+.project-content {
+    position: relative;
+    z-index: 2;
+    /* Ensure text is above the overlay */
+    animation: fade-in 1s ease-in-out;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff00cc;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.project-content a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #00f0ff;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-content a:hover {
+    color: #ff00cc;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+/* === Animations === */
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff00cc, 0 0 30px #ff00cc, 0 0 40px #ff00cc;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Custom Glow Effects === */
+/* .glow-text {
+    text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+  } */
+
+
+/* Skills Section (Spider-Web Layout) */
+/* ==================== */
+/* ==================== */
+/* Skills Section (Spider-Web Layout) */
+/* ==================== */
+/* ==== Cyberpunk Technical Skills Section ==== */
+/* ==== Spider Web Technical Skills ==== */
+
+/* === Technical Skills Section Wrapper === */
+.technical-skills-section {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+    /* margin-top: 0px; */
+}
+
+/* === Section Title === */
+.section-title {
+    color: #ffffff;
+    font-size: 46px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #ff00d0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* === Skills Container === */
+.skills-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* === Center Avatar === */
+.center-avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.center-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* === Spider-Web Style Pills === */
+/* === Spider-Web Style Pills === */
+.skill-pill {
+    position: absolute;
+    color: #00ffe7;
+    background: transparent;
+    border: 2px solid #00ffe7;
+    padding: 15px 45px;
+    /* Increased padding for larger pills */
+    border-radius: 50px;
+    white-space: nowrap;
+    font-size: 15px;
+    /* Increased font size */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00ffe7;
+    box-shadow: 0 0 8px #00ffe7, inset 0 0 5px #00ffe7;
+    transition: all 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* === Hover Effect === */
+.skill-pill:hover {
+    color: #ff00c8;
+    border-color: #ff00c8;
+    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    box-shadow: 0 0 10px #ff00c8, inset 0 0 6px #ff00c8;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+
+/* ==================== */
+/*   Responsive Styles  */
+/* ==================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 120px 20px 20px;
+    }
+
+    .z-section {
+        padding: 100px 0 60px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .typed-text,
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column;
+    }
+
+    .z-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #avatar-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .skills-web {
+        width: 350px;
+        height: 350px;
+    }
+
+    .spider {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .skill-pill {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .typed-text {
+        font-size: 0.9rem;
+    }
+
+    .buttons button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .projects-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* ==================== */
+/* About Me Section */
+/* ==================== */
+/* ==================== */
+/*   About Me Section   */
+/* ==================== */
+/* CSS */
+/* Base Styles */
+.about-section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    height: 700px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); */
+
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #0ff;
+    text-align: center;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: #0ff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    background: #ff21cf1d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.experience-block {
+    margin-bottom: 30px;
+    background: #ff21cf1d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.experience-block h4 {
+    font-size: 1.2rem;
+    color: #0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-block h4 span {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.experience-block ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.cert-list {
+    list-style: square inside;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    background: #ff21cf1d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ///game point */
+/* ==================== */
+/* Cyberpunk Game Styling */
+/* ==================== */
+/* ==================== */
+/* Cyberpunk Flyer Game */
+/* ==================== */
+
+/* CYBERWRAP */
+
+/* Container layout */
+
+
+/* ===== Container ===== */
+/* === CYBERPUNK THEME === */
+/* Cyberpunk Theme Base */
+
+
+.cyberpunk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+/* Game Box */
+.orb-game {
+    width: 350px;
+    background: #111;
+    border: 2px solid #00fff7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00fff7;
+}
+
+.game-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.game-box {
+    height: 250px;
+    background-color: #000;
+    border: 2px dashed #00fff7;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.glow-orb {
+    width: 30px;
+    height: 30px;
+    background: #ff00f7;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff00f7, 0 0 20px #ff00f7;
+    transition: all 0.2s ease;
+}
+
+.start-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    background: #00fff7;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #0ff;
+}
+
+/* Timer and Score */
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.progress {
+    width: 70%;
+    background-color: #222;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #00fff7;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Rules Section */
+.game-rules {
+    margin-top: 20px;
+}
+
+.game-rules ul {
+    padding-left: 20px;
+}
+
+.game-rules li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Contact Form */
+.cyberpunk-contact {
+    width: 350px;
+    background: #111;
+    padding: 20px;
+    border: 2px solid #ff00f7;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff00f7;
+}
+
+.cyberpunk-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cyberpunk-contact input,
+.cyberpunk-contact textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #000;
+    border: 1px solid #ff00f7;
+    color: #fff;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.cyberpunk-contact button {
+    background: #ff00f7;
+    border: none;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cyberpunk-footer {
+    text-align: center;
+    padding: 25px;
+    background: #000;
+    border-top: 2px solid #00fff7;
+    margin-top: 60px;
+    color: #00fff7;
+}

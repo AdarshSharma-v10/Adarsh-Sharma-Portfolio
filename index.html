@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adarsh Sharma | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/Firefly .png" type="image/x-icon">
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Background Animation -->
+  <div id="background"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <nav>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <!-- Navigation Links -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#game">Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Home Section -->
+    <section id="home" class="z-section">
+      <div class="intro-text">
+        <p>Hi, I'm</p>
+        <h1 class="glow-text">Adarsh Sharma</h1>
+        <div class="typed-text"><span id="typed"></span></div>
+        <div class="buttons">
+          <a href="mailto:adarshsharma.r51@gmail.com" class="hire-me">Hire Me</a>
+          <a href="/images/Adarsh Sharma_Resume_.pdf" class="resume" download>Resume</a>
+        </div>
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/adarshsharma5/" target="_blank" class="social-btn"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/adarshsharma5/" target="_blank" class="social-btn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/ranusharma_____/" target="_blank" class="social-btn"><i
+              class="fab fa-instagram"></i></a>
+          <a href="mailto:adarshsharma.r51@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Image/GIF Section -->
+      <div id="image-section">
+        <img src="/images/ReadyP.png" alt="Illustration" id="cyberpunk-img" />
+      </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="z-services">
+      <div class="service-box">
+        <h4>01</h4>
+        <h3>UI/UX Design</h3>
+        <p>Designing modern, user-centric interfaces for portfolios, web apps, and software solutions.</p>
+      </div>
+      <div class="service-box">
+        <h4>02</h4>
+        <h3>Frontend Development</h3>
+        <p>Professional in HTML, CSS, JavaScript, React.js, and building responsive, interactive UIs.</p>
+      </div>
+      <div class="service-box">
+        <h4>03</h4>
+        <h3>Backend Development</h3>
+        <p>Experienced in Java, Spring Boot, REST APIs, and deploying scalable backend systems.</p>
+      </div>
+    </section>
+    
+    <!-- //technical-skills -->
+
+    <!-- === Technical Skills Section === -->
+    <section class="technical-skills-section" id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="center-avatar">
+          <img src="images/Gemini.png" alt="Astronaut" />
+        </div>
+
+        <!-- Skill Pills -->
+        <div class="skill-pill" style="top: 10%; left: 50%;">HTML</div>
+        <div class="skill-pill" style="top: 20%; left: 75%;">CSS</div>
+        <div class="skill-pill" style="top: 40%; left: 90%;">Java</div>
+        <div class="skill-pill" style="top: 60%; left: 85%;">React</div>
+        <div class="skill-pill" style="top: 75%; left: 65%;">Git</div>
+        <div class="skill-pill" style="top: 85%; left: 45%;">UI/UX</div>
+        <div class="skill-pill" style="top: 75%; left: 20%;">Spring Boot</div>
+        <div class="skill-pill" style="top: 60%; left: 5%;">Figma</div>
+        <div class="skill-pill" style="top: 40%; left: 0%;">Vue</div>
+        <div class="skill-pill" style="top: 20%; left: 15%;">SQL</div>
+        <div class="skill-pill" style="top: 50%; left: 60%;">JavaScript</div>
+      </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2 class="section-title glow-text">Projects</h2>
+      <div class="projects-grid">
+        <!-- Repeatable Project Cards -->
+        <div class="project-card" style="background-image: url('/images/image_2.jpg');">
+          <div class="project-content">
+            <h3>Hospital Bed Finder</h3>
+            <p><strong>Tech:</strong> Java, XML, API, MySQL</p>
+            <br>
+            <p>Android app to track hospital bed availability using Google Maps API with real-time data.</p>
+            <a href="https://github.com/AdarshSharma-v10/Hospital-Management-System" target="_blank">🔗 View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card" style="background-image: url('/images/bmwbanner.jpg');">
+          <div class="project-content">
+            <h3>IG Threads</h3>
+            <p><strong>Tech:</strong> MERN + Socket.io + Chakra UI</p><br>
+            <p>Developed and deployed a full stack MERN stack web application to facilitate dynamic user interactio</p>
+            <a href="https://github.com/AdarshSharma-v10/Ig-Threads" target="_blank">🔗 View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card" style="background-image: url('/images/Plane.jpg');">
+          <div class="project-content">
+            <h3>AI-Image-Genneration</h3>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p><br>
+            <p>Utilized OpenAI API to generate AI-driven images, highlighting creativity</p>
+            <a href="https://github.com/AdarshSharma-v10/AI-Image-Genneration" target="_blank">🔗 View Project</a>
+          </div>
+        </div>
+        <div class="project-card" style="background-image: url('/images/HMS.png');">
+          <div class="project-content">
+            <h3>Hospital-Management-System</h3>
+            <p><strong>Tech:</strong> Java, Swing, Mysql, XML</p><br>
+            <p>Implemented features such as patient registration, room allocation, and employee management to streamline
+              processes and optimize data handling. </p>
+            <a href="https://github.com/AdarshSharma-v10/AI-Image-Genneration" target="_blank">🔗 View Project</a>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    <!-- Placeholder for About Me-->
+    <!-- HTML -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab('summary')">Summary</button>
+        <button class="tab-btn" onclick="switchTab('experience')">Experience</button>
+        <button class="tab-btn" onclick="switchTab('certification')">Certification</button>
+        <button class="tab-btn" onclick="switchTab('achievement')">Achievement</button>
+      </div>
+
+      <div class="tab-content" id="summary" style="display: block;">
+        <p class="summary-text">
+          Creative and detail-oriented Frontend Developer with expertise in HTML, CSS, JavaScript, React.js, and UI/UX design principles. Skilled in building responsive, accessible, and interactive web interfaces with a focus on performance and user experience. Proficient in using tools like Figma, Tailwind CSS, and GSAP to craft visually engaging, modern web applications
+        </p>
+        <br>
+        <p class="summary-text">
+          Result-driven Backend Developer specializing in Java, Spring Boot, RESTful APIs, and MySQL. Experienced in developing scalable, secure, and efficient backend systems for real-world applications. Proficient in JPA, Hibernate, and integrating databases with cloud-ready solutions, with a strong focus on performance optimization and clean architecture.
+        </p>
+      </div>
+
+      <div class="tab-content" id="experience">
+        <div class="experience-block">
+          <h4>Vocational Training <span>Jun 2023 - July 2023 | Apprenticeship</span></h4>
+          <p><strong>Coding Spoon</strong></p>
+          <ul>
+            <li>Optimized system architecture and UI/UX for enhanced user experience and functionality.</li>
+            <li>Integrated third-party APIs, streamlined data flow, and performed debugging.</li>
+          </ul>
+        </div>
+
+        <div class="experience-block">
+          <h4>Operational Intern <span>July 2022 - Aug 2022 | Onsite</span></h4>
+          <p><strong>Chhattisgarh State Power Distribution Company Limited</strong></p>
+          <ul>
+            <li>Enhanced frontend UIs using user-centered design.</li>
+            <li>Collaborated with teams to convert requirements into technical solutions.</li>
+            <li>Implemented strategic improvements for better productivity.</li>
+          </ul>
+        </div>
+
+        <div class="experience-block">
+          <h4>Volunteering at Technovert | Virtusa <span>July 2022, Aug 2023</span></h4>
+          <ul>
+            <li>Troubleshot IT issues, improved communication, and maintained technical operations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="certification">
+        <ul class="cert-list">
+          <li><strong>Google:</strong> Generative AI</li>
+          <li><strong>Oracle:</strong> OCI Foundation Courses</li>
+          <li><strong>AICTE & SS&C Blue Prism:</strong> Intelligent Automation</li>
+          <li><strong>GUVI & IIT:</strong> AI Face Recognition</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="achievement">
+        <ul class="cert-list">
+          <li>Completed <strong>Google Generative AI</strong> with top 5% project implementation.</li>
+          <li>Recognized for UI/UX innovation at <strong>Coding Spoon</strong>.</li>
+          <li>Presented a working automation demo in <strong>AICTE Blue Prism Hackathon</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lottie Player Script -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+  </main>
+  <!-- //game container -->
+
+
+
+  <section class="cyberpunk-container" id="game">
+    <!-- Game Box -->
+    <div class="orb-game">
+      <h2 class="game-title">Catch the Orb</h2>
+      <div class="game-box" id="orbZone"></div>
+      <button class="start-btn" id="startGameBtn">Start Game</button>
+      <div class="info-bar">
+        <span>Score: <span id="gameScore">0</span></span>
+        <div class="progress">
+          <div class="progress-bar" id="gameTimerBar"></div>
+        </div>
+      </div>
+      <div class="game-rules">
+        <h3>📃 Rules :</h3>
+        <ul>
+          <li>Click the glowing orb to earn points</li>
+          <li>Game lasts for 15 seconds</li>
+          <li>Orb appears randomly inside the box</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="cyberpunk-contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="cyberpunk-footer">
+    <p>Designed And Developed by Adarsh Sharma | © 2025 Cyberpunk⚡ </p>
+  </footer>
+
+
+
+  <!-- Sound -->
+  <audio id="clickSound"
+    src="https://assets.mixkit.co/sfx/download/mixkit-quick-win-video-game-notification-269.mp3"></audio>
+
+
+
+  <!-- Local Scripts -->
+  <script src="script.js"></script>
+  <script src="cyberGame.js"></script>
+
+
+  <!-- === Scripts === -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+  <script src="libs/three.js-master/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="libs/three.js-master/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</body>
+
+</html>
